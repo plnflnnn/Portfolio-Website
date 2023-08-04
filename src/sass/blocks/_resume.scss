@@ -1,0 +1,105 @@
+.resume {
+    padding-top: 20px;
+    &__subtitle {
+        text-align: center;
+    }
+    &__wrapper {
+        margin: 0 auto;
+        padding-top: 40px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__column {
+        padding-left: 42px;
+        width: 410px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        &-title {
+            position: relative;
+            &:before {
+                content: '';
+                position: absolute;
+                width: 15px;
+                height: 15px;
+                border-radius: 100%;
+                background: $main-color;
+                top: 7px;
+                left: -37px;
+                transform: translateX(-80%);
+                z-index: 2;
+            }
+        }
+        &:after {
+            position: absolute;
+            content: '';
+            width: 1px;
+            height: calc(100% - 20px);
+            top: 20px;
+            left: 0;
+            background-color: #000000;
+            z-index: -1;
+        }
+    }
+    &__item {
+        &-head {
+            position: relative;
+            margin: 45px 0 18px 56px;
+            h4 {
+                margin-bottom: 0;
+            }
+        }
+        &-icon {
+            position: absolute;
+            left: -40px;
+            bottom: 0;
+            z-index: 2;
+            @include before__circle;
+            &:before {
+                left: -17px;
+                bottom: 0;
+                transform: translateY(-6px);
+            }
+            &:after {
+                position: absolute;
+                content: '';
+                width: 44px;
+                height: 1px;
+                background-color: #000000;
+                left: -58px;
+                bottom: 20px;
+                z-index: -5;
+            }
+        }
+        &-location {
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 18px;
+            color: #000000;
+            margin-top: 0;
+        }
+        &-text {
+            max-width: 375px;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 18px;
+            color: #000000;
+        }
+    }
+    &__certificate {
+        text-decoration: underline;
+        color: #000000;
+        cursor: pointer;
+        &:hover, &:active {
+            color: #000000;
+        }
+    }
+    &__certificate__language  {
+        text-decoration: underline;
+        color: #000000;
+        cursor: pointer;
+        &:hover, &:active {
+            color: #000000;
+        }
+    }
+}

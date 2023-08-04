@@ -1,0 +1,83 @@
+.promo {
+    min-height: 100vh;
+    position: relative;
+    padding-top: 205px;
+    background: linear-gradient(300deg, #79E0EE, #98EECC, #D0F5BE, #F8E8EE, #B4FF9F, #FFE3A9, #FF8E9E);
+    background-size: 180% 180%;
+    animation: gradient-animation 10s ease infinite;
+    &__title {
+        margin-top: 10px;
+        margin-right: 0;
+    }
+
+    &__subtitle {
+        display: block;
+        margin-right: 0;
+        position: relative;
+        padding-left: 10px;
+        z-index: 2;
+        @include before__circle_promo;
+    }
+    &__btns {
+        margin-top: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 250px;
+    }
+    &__link {
+        font-size: 14px;
+        font-weight: 700;
+        color: #000000;
+        border-radius: 5px;
+        &:hover {
+            color: #000000;
+            box-shadow: 0px 0px 20px #609966;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        &:active {
+            background: #609966;
+        }
+        a {
+            &:hover {
+                color: #000000;
+                cursor: pointer;
+                text-decoration: none;
+            }
+        }
+    }
+    .hamburger {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        height: 21px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+        cursor: pointer;
+        span {
+            display: block;
+            width: 30px;
+            height: 1px;
+            background: #151812;
+        }
+        span.long {
+            width: 36px;
+        }
+    }
+
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
