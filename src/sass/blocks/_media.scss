@@ -27,7 +27,7 @@
             grid-template-columns: 350px 500px;
         }
         &__form {
-            grid-template: 40px 140px 40px/repeat(2,245px);
+            grid-template: 40px 140px 40px 60px /repeat(2, 245px);
             row-gap: 20px;
         }
     }
@@ -79,8 +79,11 @@
             justify-content: center;
         }
         &__form {
-            grid-template: 45px 190px 45px / repeat(2, auto);
+            grid-template: 45px 190px 45px 60px / repeat(2, 280px);
             column-gap: 10px;
+        }
+        &__descr {
+            width: 80%;
         }
         &__policy {
             span:before {
@@ -149,7 +152,7 @@
     }
     .contacts {
         &__form {
-            grid-template: 45px 190px 45px/repeat(2,auto);
+            grid-template: 45px 190px 45px 60px /repeat(2, 210px);
         }
         &__triggers {
             column-gap: 25px;
@@ -220,9 +223,10 @@
             padding-right: 0;
         }
         &__form {
-            grid-template: 45px 45px  143px/ 100%; 
+            grid-template: 45px 45px 143px 100px 60px/100%;
             grid-template-columns: 100%;
             justify-content: center;
+            row-gap: 30px;
             #name {
                 order: 1;
             }
@@ -237,7 +241,9 @@
             grid-column: unset;
             grid-row: unset ;
         }
-        
+        &__descr {
+            width: 90%;
+        }
         &__triggers {
             grid-column: unset;
             grid-template-columns: auto;
@@ -283,6 +289,14 @@
             height: 550px;
         }
     }
+    .formMessage {
+        grid-column: 1 / 2;
+    }
+
+    .statusMessages {
+        grid-column: 1 / 2;
+    }
+    
 }
 
 

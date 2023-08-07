@@ -33,15 +33,6 @@ const validateForm = (spanSelector, mailInputSelector, nameSelector, btnSelector
 		}
 	};
 
-	const disabled = () => {
-		btn.setAttribute('disabled', true);
-	};
-
-	const disabledFalse = () => {
-		btn.removeAttribute('disabled');
-	};
-
-
 	// email
 
 	const showValidationMessage = () => {
@@ -58,16 +49,13 @@ const validateForm = (spanSelector, mailInputSelector, nameSelector, btnSelector
 
 	const emailValidation = () => {
 		if (mailInput.value == '' || mailInput.value == null) {
-			disabled();
 			errorInput(mailInput);
 		}
 
 		if (mailInput.value.match(/[^a-z 0-9 @]/ig)) {
 			deleteMessage();
-			disabledFalse();
 			normalInput(mailInput);
 		} else {
-			disabled();
 			errorInput(mailInput);
 		}
 	};
@@ -86,7 +74,6 @@ const validateForm = (spanSelector, mailInputSelector, nameSelector, btnSelector
 			deleteMessage();
 			showValidationMessage(mailInput);
 			errorInput(mailInput);
-			disabled();
 		}
 	});
 
@@ -95,9 +82,11 @@ const validateForm = (spanSelector, mailInputSelector, nameSelector, btnSelector
 	const nameValidation = () => {
 		if (name.value.replace(/ /g, '') == '' || name.value == null || name.value.match(/\d/ig)) {
 			errorInput(name);
-			disabled();
 		} else {
-			disabledFalse();
+			normalInput(name);
+		}
+
+		if(name.value.match(/[^a-z]/ig)) {
 			normalInput(name);
 		}
 	};
@@ -115,7 +104,32 @@ const validateForm = (spanSelector, mailInputSelector, nameSelector, btnSelector
 		nameValidation();
 	});
 
+	//
+
+	const checkboxValidation = () => {
+		if(!checkbox.checked) {
+			span.classList.add('error');
+		} 
+		
+		if(checkbox.checked) {
+			span.classList.remove('error');
+		}
+	};
+
 	//btn
+
+	const disabled = () => {
+		btn.setAttribute('disabled', true);
+	};
+
+	const disabledFalse = () => {
+		btn.removeAttribute('disabled');
+	};
+
+
+	if(checkbox.checked && mailInput.value.match(/[^a-z 0-9 @]/ig)) {
+		disabledFalse();
+	} 
 
 	btn.addEventListener('click', () => {
 
@@ -123,20 +137,25 @@ const validateForm = (spanSelector, mailInputSelector, nameSelector, btnSelector
 
 		nameValidation();
 
-		if(!checkbox.checked) {
-			disabled();
-			span.classList.add('error');
-		} 
-		
-		if(checkbox.checked) {
-			disabledFalse();
-			span.classList.remove('error');
-		}
+		checkboxValidation();
 
-		if(checkbox.checked &&
-		(name.value.replace(/ /g, '') != '' || name.value != null || name.value.match(/\d/ig)) &&
-		(mailInput.value.match(/[^a-z 0-9 @]/ig))) {
+		if(checkbox.checked && mailInput.value.match(/[^a-z 0-9 @]/ig)) {
 			disabledFalse();
+		} else {
+			disabled();
+			const form = document.querySelector('form');
+			const formMessage = () => {
+					const message = document.createElement('div');
+					message.classList.add('formMessage');
+					message.textContent = 'You need fill in the name and email field and agree to the privacy policy to submit the form.';
+					form.insertAdjacentElement('beforeend', message);
+		
+					setTimeout(() => {
+						message.remove();
+						disabledFalse();
+					}, 3000);
+			}
+			formMessage();
 		}
 	});
 };

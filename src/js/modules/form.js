@@ -12,16 +12,9 @@ const form = () => {
 
 		function showMessage(mess) {
 			const statusMessage = document.createElement('div');
-			statusMessage.style.cssText = `
-			  display: block;
-			  margin: 0 auto;
-			  padding-top: 15px;
-			  font-weight:  300;
-			  font-size: 16px;
-			`;
 			statusMessage.classList.add('statusMessages');
 			statusMessage.textContent = mess;
-			form.insertAdjacentElement('afterend', statusMessage);
+			form.insertAdjacentElement('beforeend', statusMessage);
 
 			setTimeout(() => {
 				statusMessage.remove();

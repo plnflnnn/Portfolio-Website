@@ -1,5 +1,5 @@
 .contacts {
-    padding: 170px 0 90px 0;
+    padding: 170px 0 40px 0;
     &__wrapper {
         padding: 0 35px 0 52px;
         display: grid;
@@ -41,7 +41,7 @@
     &__form {
         margin-top: 20px;
         display: grid;
-        grid-template: 40px 140px 40px / repeat(2, 280px);
+        grid-template: 40px 140px 40px 60px / repeat(2, 280px);
         justify-content: space-between;
         row-gap: 25px;
         label {
@@ -138,6 +138,7 @@
         }
         span.error::before {
             border: 1px solid #B31312;
+            box-shadow: 1px 1px 1px #b31312;
         }
         span:before {
             display: block; 
@@ -156,7 +157,25 @@
         #checkbox:checked + span:before{ 
             content: '✔';
             font-size: 17px;
-            border: 1px solid #000;
+            border: 1px solid #000000;
+            box-shadow: none;
         }
     }
+}
+
+.formMessage {
+    display: block;
+    margin: 0 auto;
+    font-weight:  300;
+    font-size: 16px;
+    color: #B31312;
+    grid-column: 1 / 3;
+}
+
+.statusMessages {
+    display: block;
+    margin: 0 auto;
+    font-weight:  300;
+    font-size: 16px;
+    grid-column: 1 / 3;
 }
