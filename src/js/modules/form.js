@@ -18,8 +18,10 @@ const form = () => {
 
 			setTimeout(() => {
 				statusMessage.remove();
-			}, 3000);
+			}, 6000);
 		}
+
+		showMessage(messages.loading);
 
 		const formData = new FormData(form);
 
