@@ -5,7 +5,6 @@ const form = () => {
 		e.preventDefault();
 
 		const messages = {
-			loading: 'Loading...',
 			success: 'Thank you for your message! I will contact you shortly.',
 			failure: 'Something went wrong...'
 		};
@@ -21,8 +20,6 @@ const form = () => {
 			}, 6000);
 		}
 
-		showMessage(messages.loading);
-
 		const formData = new FormData(form);
 
 		const inputs = document.querySelectorAll('input'),
@@ -35,7 +32,7 @@ const form = () => {
 			textarea.value = '';
 		};
 
-		fetch('mailer/smart.php', {
+		fetch('mailer/smart,', {
 			method: 'POST',
 			body: formData
 		})
