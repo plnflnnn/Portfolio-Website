@@ -32,7 +32,7 @@ const form = () => {
 			textarea.value = '';
 		};
 
-		fetch('mailer/smart,', {
+		fetch('mailer/smart.php', {
 			method: 'POST',
 			body: formData
 		})
