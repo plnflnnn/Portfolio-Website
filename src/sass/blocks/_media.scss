@@ -147,7 +147,12 @@
     .portfolio {
         margin-top: 70px;
         &__wrapper{
-            margin-top: 40px;
+            &_application {
+                margin-bottom: 100px;
+            }
+            &_cms {
+                grid-template-columns: 320px;
+            }
         }
     }
     .contacts {
@@ -217,7 +222,6 @@
         }
     }
     .contacts {
-        padding-top: 160px;
         &__wrapper {
             padding-left: 0;
             padding-right: 0;
