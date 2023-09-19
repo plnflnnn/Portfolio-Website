@@ -6,6 +6,10 @@
             padding-top: 100px;
             text-align: center;
         }
+        &__cms {
+            padding-top: 150px;
+            text-align: center;
+        }
     }
     &__wrapper {
         margin-top: 30px;
@@ -22,6 +26,15 @@
             grid-template-rows:  280px ;
             gap: 40px;
             grid-auto-rows: 280px;
+            place-content: center;
+        }
+        &_cms {
+            margin-top: 30px;
+            display: grid;
+            grid-template: 280px / 255px;
+            grid-auto-rows: 280px;
+            row-gap: 100px;
+            column-gap: 50px;
             place-content: center;
         }
     }
