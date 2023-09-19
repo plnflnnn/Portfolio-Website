@@ -2,9 +2,11 @@
     min-height: 100vh;
     position: relative;
     padding-top: 205px;
-    background: linear-gradient(300deg, #79E0EE, #98EECC, #D0F5BE, #F8E8EE, #B4FF9F, #FFE3A9, #FF8E9E);
-    background-size: 180% 180%;
-    animation: gradient-animation 10s ease infinite;
+    // background: linear-gradient(250deg, #79E0EE, #98EECC, #D0F5BE, #FBFFDC);
+    // background: linear-gradient(60deg, #E8FFCE, #ACFADF, #94ADD7);
+    background: linear-gradient(60deg, #FBFFDC, #FFE5CA,#ACFADF);
+    background-size: 170% 170%;
+    animation: gradient-animation 7s ease infinite;
     &__title {
         margin-top: 10px;
         margin-right: 0;
@@ -16,7 +18,7 @@
         position: relative;
         padding-left: 10px;
         z-index: 2;
-        @include before__circle_promo;
+        @include before__circle;
     }
     &__btns {
         margin-top: 35px;

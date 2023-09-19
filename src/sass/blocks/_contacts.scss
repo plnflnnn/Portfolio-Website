@@ -1,5 +1,6 @@
 .contacts {
-    padding: 200px 0 40px 0;
+    padding: 100px 0 40px 0;
+    // background-color: #ffff;
     &__wrapper {
         padding: 0 35px 0 52px;
         display: grid;
@@ -39,7 +40,7 @@
         }
     }
     &__form {
-        margin-top: 20px;
+        margin-top: 25px;
         display: grid;
         grid-template: 40px 140px 40px 60px / repeat(2, 280px);
         justify-content: space-between;
@@ -47,14 +48,14 @@
         label {
             position: absolute;
             padding: 0 8px;
-            background-color: #ffff;
             height: 18px;
             font-size: 12px;
             font-weight: 500;
             display: block;
             margin-bottom: 0;
-            top: -10px;
-            left: 12px;
+            top: -20px;
+            left: 0px;
+            background-color: #ffff;
         }
     }
     &__input {
