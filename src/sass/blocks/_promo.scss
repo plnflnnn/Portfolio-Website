@@ -3,7 +3,7 @@
     position: relative;
     padding-top: 205px;
     // background: linear-gradient(250deg, #79E0EE, #98EECC, #D0F5BE, #FBFFDC);
-    // background: linear-gradient(60deg, #E8FFCE, #ACFADF, #94ADD7);
+    // background: linear-gradient(60deg, #E4F1FF,  #AED2FF, #6499E9); // blue 
     background: linear-gradient(60deg, #FBFFDC, #FFE5CA,#ACFADF);
     background-size: 170% 170%;
     animation: gradient-animation 7s ease infinite;
@@ -34,12 +34,12 @@
         border-radius: 5px;
         &:hover {
             color: #000000;
-            box-shadow: 0px 0px 20px #609966;
+            box-shadow: 0px 0px 20px $main-color;
             cursor: pointer;
             text-decoration: none;
         }
         &:active {
-            background: #609966;
+            background: $main-color;
         }
         a {
             &:hover {

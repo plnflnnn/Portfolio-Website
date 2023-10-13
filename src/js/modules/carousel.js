@@ -17,7 +17,7 @@ const carousel = ( triggersSelector, slideSelector, sliderSelector, rightArrowSe
 	const openSlider = () => {
 		triggers.forEach((trigger, i) => {
 			trigger.addEventListener('click', () => {
-				let href = trigger.getAttribute('data');
+				let href = trigger.getAttribute('data-src');
 				slider.style.display = 'block';
 				slide.setAttribute('src', href);
 
@@ -28,7 +28,7 @@ const carousel = ( triggersSelector, slideSelector, sliderSelector, rightArrowSe
 						i++;
 					}
 	
-					let href = triggers[i].getAttribute('data');
+					let href = triggers[i].getAttribute('data-src');
 					slide.setAttribute('src', href);
 				};
 
@@ -39,7 +39,7 @@ const carousel = ( triggersSelector, slideSelector, sliderSelector, rightArrowSe
 						i--;
 					} 
 	
-					let href = triggers[i].getAttribute('data');
+					let href = triggers[i].getAttribute('data-src');
 					slide.setAttribute('src', href);
 				};
 		
