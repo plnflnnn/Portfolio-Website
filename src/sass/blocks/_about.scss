@@ -3,10 +3,11 @@
     z-index: -5;
     &__wrapper {
         display: grid;
-        grid-template-columns: 350px 600px;
+        grid-template-columns: 350px 500px;
         grid-template-rows: minmax(245px, auto); 
         column-gap: 70px;
         row-gap: 40px;
+        justify-content: center;
     }
     &__photo {
         img {
@@ -24,8 +25,8 @@
     }
     &__text {
         margin-top: 20px;
-        font-weight: 500;
-        font-size: 14px;
+        font-weight: 300;
+        font-size: 15px;
         line-height: 21px;
         color: #000000;
     }

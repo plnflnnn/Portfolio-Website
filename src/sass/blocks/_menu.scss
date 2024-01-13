@@ -19,7 +19,7 @@
         height: 100%;
         right: 0px;
         transition: 0.6s all;
-        padding-top: 140px;
+        padding-top: 80px;
         padding-left: 40px;
         z-index: 3;
     }
@@ -39,11 +39,12 @@
     }
     &__link {
         position: relative;
-        font-weight: 700;
+        font-weight: 300;
         font-size: 21px;
         text-transform: uppercase;
         transition: 0.6s all;
         margin-bottom: 15px;
+        margin-top: 15%;
         a {
             color: #000;
             text-decoration: none;
@@ -71,7 +72,7 @@
         justify-content: space-between;
         align-items: center;
         position: absolute;
-        bottom: 15vh;
+        bottom: 10vh;
         left: 50%;
         transform: translateX(-50%);
         svg {

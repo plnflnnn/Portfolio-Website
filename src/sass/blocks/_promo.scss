@@ -3,15 +3,17 @@
     position: relative;
     padding-top: 205px;
     // background: linear-gradient(250deg, #79E0EE, #98EECC, #D0F5BE, #FBFFDC);
-    // background: linear-gradient(60deg, #E4F1FF,  #AED2FF, #6499E9); // blue 
-    background: linear-gradient(60deg, #FBFFDC, #FFE5CA,#ACFADF);
-    background-size: 170% 170%;
+    background: linear-gradient(60deg, #E4F1FF, #EEF5FF,  #AED2FF, #6499E9);
+    // background: linear-gradient(60deg, #FBFFDC, #FFE5CA,#ACFADF); //green
+    background-size: 130% 140%;
     animation: gradient-animation 7s ease infinite;
     &__title {
         margin-top: 10px;
         margin-right: 0;
     }
-
+    // .title_fz16 {
+    //     font-weight: 400;
+    // }
     &__subtitle {
         display: block;
         margin-right: 0;
@@ -29,7 +31,7 @@
     }
     &__link {
         font-size: 14px;
-        font-weight: 700;
+        font-weight: 500;
         color: #000000;
         border-radius: 5px;
         &:hover {
