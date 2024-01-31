@@ -23,13 +23,6 @@
             row-gap: 20px;
         }
     }
-    .portfolio {
-        &__wrapper {
-            &_websites {
-                grid-template-columns: repeat(3, 255px);
-            }
-        }
-    }
 }
 
 @media (max-width: 992px) {
@@ -61,7 +54,7 @@
     .resume {
         &__wrapper {
             margin-left: 15px;
-            width: 100%;
+            width: 90%;
         }
         &__column {
             width: 330px;
@@ -74,11 +67,6 @@
                 max-width: 300px;
                 font-size: 13px;
             }
-        }
-    }
-    .portfolio {
-        &__wrapper {
-            grid-template-columns: repeat(2, 255px);
         }
     }
     .contacts {
@@ -113,6 +101,18 @@
     }
     .carousel__img {
         margin-top: 50px;
+    }
+    .portfolio {
+        &__wrapper {
+            margin-bottom: 100px;
+        }
+        &__item {
+            width: 250px;
+            margin-right: 15px;
+            margin-left: 15px;
+            margin-bottom: 70px;
+            margin-top: 50px;
+        }
     }
 }
 
@@ -156,9 +156,6 @@
                 max-width: 100%;
             }
         }
-    }
-    .portfolio {
-        margin-top: 70px;
     }
     .contacts {
         &__form {
@@ -210,16 +207,6 @@
     .portfolio {
         &__descr {
             margin-left: 20px;
-        }
-        &__wrapper{
-            grid-template-rows: 280px;
-            grid-template-columns: 320px;
-            margin-bottom: 100px;
-            &_cms {
-                grid-template-columns: 320px;
-                place-content: center;
-                gap: 100px;
-            }
         }
     }
     .contacts {

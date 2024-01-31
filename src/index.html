@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Polina Filina</title>
     <meta name="title" content="Polina Filina">
-    <meta name="description" content="Hi, I am a Front-End Developer and this is my personal portfolio website. Here you can see my portfolio and certificates, as well as contact me.">
+    <meta name="description" content="Hi, I am a Web Developer and this is my personal portfolio website. Here you can see my portfolio and certificates, as well as contact me.">
     <link rel="icon" type="image/svg+xml" href="icons/favicon/favicon.svg">
     <link rel="icon" type="image/png" href="icons/favicon/favicon.png">
 
@@ -93,7 +93,7 @@
         <div class="container">
             <div class="title title_fz20 promo__subtitle">Hi, I'm Polina</div>
             <div>
-                <h1 class="title title_fz48 promo__title">Front-End Developer</h1>
+                <h1 class="title title_fz48 promo__title">Web Developer</h1>
             </div>
             <div class="promo__btns">
                 <a href="#portfolio" class="promo__link btn">Portfolio</a>
@@ -113,7 +113,7 @@
                 <div class="title title_fz30 about__subtitle">My name is Polina Filina</div>
                 
                 <p class="about__text">
-                    I'm a passionate and dedicated Front-end Developer based in Incheon, South Korea.
+                    I'm a passionate and dedicated Web Developer based in Incheon, South Korea.
                     I'm experienced in using HTML, CSS, and JavaScript, React and Redux.
                     I'm not just about the frontend – I also have experience with backend technologies like WordPress, Express.js, PostgreSQL and MongoDB.
                     <br> <br>
@@ -175,7 +175,7 @@
                                 </div>
                                 <div class="resume__item-text">
                                     <div class="resume__certificate__language" data-src="img/certificates/EF SET Certificate.jpg"> English: Upper Intermediate</div>
-                                    <div>Korean: English: Upper Intermediate</div>
+                                    <div>Korean: Upper Intermediate</div>
                                     <div>Russian: Native proficiency </div>
                                 </div>
                             </div>
@@ -197,11 +197,12 @@
                                 <div class="resume__item-text">
                                     HTML5, CSS3, Sass, SCSS <br>
                                     JavaScript, Node.js <br>
-                                    PostgreSQL, MongoDB, Mongoose <br>
+                                    React, React Redux <br>
                                     Express, EJS <br>
+                                    PostgreSQL, MongoDB, Mongoose <br>
                                     OAuth, Express Session<br>
                                     WordPress <br>
-                                    React, React Redux <br>
+                                    Stripe <br>
                                     Bootstrap, jQuery <br>
                                     Gulp, Webpack, npm <br>
                                     Git, GitHub <br>
@@ -235,15 +236,14 @@
     <section id="portfolio" class="portfolio">
                 <div class="container">
                     <h2 class="title title_fz20 title_section-title">Portfolio</h2>
-
-                    <div class="title title_fz30 portfolio__subtitle">Website Development</div>
-
                     <div class="portfolio__descr">
                         <p>Click on the picture to open a project.</p>
                         <p>Click on the <a href="https://github.com/plnflnnn">GitHub repository</a> link under the project picture to open the project repository.</p>
                     </div>
+
+                    <div class="title title_fz30 portfolio__subtitle">Frontend Development</div>
                     
-                    <div class="portfolio__wrapper portfolio__wrapper_websites">
+                    <div class="portfolio__wrapper">
 
                         <div class="portfolio__item">
                             <a href="/portfolio/pulse" class="portfolio__item_link">
@@ -273,6 +273,11 @@
                             <p class="portfolio__item_descr"> HTML, CSS, Bootstrap </p>
                             <p><a href="https://github.com/plnflnnn/Portfolio.-Web-Development/tree/main/tinDog">GitHub repository</a></p>
                         </div>
+                    </div>
+
+                    <div class="title title_fz30 portfolio__subtitle">JavaScript</div>
+
+                    <div class="portfolio__wrapper">
                         <div class="portfolio__item">
                             <a href="/portfolio/food" class="portfolio__item_link">
                                 <img src="img/works/food.jpg" alt="portfolio-item">
@@ -303,13 +308,18 @@
                         </div>
                     </div>
 
-                    <div class="title title_fz30 portfolio__subtitle__application">Web Application Development</div>
-
+                    <div class="title title_fz30 portfolio__subtitle">React applications</div>
                     <div class="portfolio__descr">
-                        <p>Some applications can take up to a minute to load due to the server location and free hosting.</p>
+                        <p>Some applications or API <span> can take up to a minute to load</span> due to the server location and free hosting.</p>
                     </div>
-                    
                     <div class="portfolio__wrapper">
+                        <div class="portfolio__item">
+                            <a href="http://grocery-shop.s3-website-us-east-1.amazonaws.com" class="portfolio__item_link">
+                                <img src="img/works/grocery.png" alt="portfolio-item">
+                            </a>
+                            <p class="portfolio__item_descr"> HTML, CSS, Tailwind, Express.js, PostgreSQL, React Redux Toolkit, Stripe </p>
+                            <p><a href="https://github.com/plnflnnn/Portfolio.-Web-Application-Development/tree/main/grocery">GitHub repository</a></p>
+                        </div>
                         <div class="portfolio__item">
                             <a href="http://coffee-shop-application.s3-website-us-east-1.amazonaws.com" class="portfolio__item_link">
                                 <img src="img/works/coffee.png" alt="portfolio-item">
@@ -318,11 +328,27 @@
                             <p><a href="https://github.com/plnflnnn/Portfolio.-Web-Application-Development/tree/main/coffee%20shop">GitHub repository</a></p>
                         </div>
                         <div class="portfolio__item">
-                            <a href="http://marvel-application.s3-website-us-east-1.amazonaws.com" class="portfolio__item_link">
+                            <a href="https://marvel1.onrender.com/" class="portfolio__item_link">
                                 <img src="img/works/marvel.jpeg" alt="portfolio-item">
                             </a>
-                            <p class="portfolio__item_descr"> React (React Lazy, React Router, React Transition Group, Formik, Yup, React Helmet) </p>
+                            <p class="portfolio__item_descr"> React Hooks (React Lazy, React Router, React Transition Group, Formik, Yup, React Helmet) </p>
                             <p><a href="https://github.com/plnflnnn/Portfolio.-Web-Application-Development/tree/main//marvel">GitHub repository</a></p>
+                        </div>
+                    </div>
+
+                    <div class="title title_fz30 portfolio__subtitle">Express.js</div>
+
+                    <div class="portfolio__descr">
+                        <p>Some applications or API <span> can take up to a minute to load</span> due to the server location and free hosting.</p>
+                    </div>
+                    
+                    <div class="portfolio__wrapper">
+                        <div class="portfolio__item">
+                            <a href="https://secrets-app-6djr.onrender.com/" class="portfolio__item_link">
+                                <img src="img/works/secrets.png" alt="portfolio-item">
+                            </a>
+                            <p class="portfolio__item_descr"> OAuth 2.0, Passport.js, Express Session, Express.js, MongoDB, Mongoose</p>
+                            <p><a href="https://github.com/plnflnnn/Portfolio.-Web-Application-Development/tree/main/secrets">GitHub repository</a></p>
                         </div>
                         <div class="portfolio__item">
                             <a href="https://todolist-fibo.onrender.com/" class="portfolio__item_link">
@@ -332,31 +358,17 @@
                             <p><a href="https://github.com/plnflnnn/Portfolio.-Web-Application-Development/tree/main/todolist">GitHub repository</a></p>
                         </div>
                         <div class="portfolio__item">
-                            <a href="https://secrets-app-6djr.onrender.com/" class="portfolio__item_link">
-                                <img src="img/works/secrets.png" alt="portfolio-item">
-                            </a>
-                            <p class="portfolio__item_descr"> OAuth 2.0, Passport.js, Express Session, Express.js, MongoDB, Mongoose</p>
-                            <p><a href="https://github.com/plnflnnn/Portfolio.-Web-Application-Development/tree/main/secrets">GitHub repository</a></p>
-                        </div>
-                        <div class="portfolio__item">
                             <a href="https://blog-y1z3.onrender.com/" class="portfolio__item_link">
                                 <img src="img/works/blog.png" alt="portfolio-item">
                             </a>
                             <p class="portfolio__item_descr">PostgreSQL, Express.js</p>
                             <p><a href="https://github.com/plnflnnn/Portfolio.-Web-Application-Development/tree/main/blog">GitHub repository</a></p>
                         </div>
-                        <div class="portfolio__item">
-                            <a href="https://travel-fpdo.onrender.com/" class="portfolio__item_link">
-                                <img src="img/works/travel.png" alt="portfolio-item">
-                            </a>
-                            <p class="portfolio__item_descr">PostgreSQL, Express.js</p>
-                            <p><a href="https://github.com/plnflnnn/Portfolio.-Web-Application-Development/tree/main/travel">GitHub repository</a></p>
-                        </div>
                     </div>
 
-                    <div class="title title_fz30 portfolio__subtitle__cms">CMS WordPress</div>
+                    <div class="title title_fz30 portfolio__subtitle">CMS WordPress</div>
                     
-                    <div class="portfolio__wrapper portfolio__wrapper_cms">
+                    <div class="portfolio__wrapper">
                         <div class="portfolio__item">
                             <a href="/portfolio/wordpress/topforum/" class="portfolio__item_link">
                                 <img src="img/works/topforum.jpeg" alt="portfolio-item">
