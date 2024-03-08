@@ -4,10 +4,12 @@ const carousel = ( triggersSelector, slideSelector, sliderSelector, rightArrowSe
 		slide = document.querySelector(slideSelector),
 		rightArrow = document.querySelector(rightArrowSelector),
 		leftArrow = document.querySelector(leftArrowSelector),
-		overlay = document.querySelector(overlaySelector);
+		overlay = document.querySelector(overlaySelector),
+		body = document.querySelector('body');
 
 	const closeSlider = () => {
 		slider.style.display = 'none';
+		body.style.overflow = 'auto';
 	};
 
 	overlay.addEventListener('click', () => {
@@ -19,6 +21,7 @@ const carousel = ( triggersSelector, slideSelector, sliderSelector, rightArrowSe
 			trigger.addEventListener('click', () => {
 				let href = trigger.getAttribute('data-src');
 				slider.style.display = 'block';
+				body.style.overflow = 'hidden';
 				slide.setAttribute('src', href);
 
 				const nextSlider = () => {

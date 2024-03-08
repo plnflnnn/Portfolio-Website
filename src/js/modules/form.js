@@ -14,10 +14,9 @@ const form = () => {
 			statusMessage.classList.add('statusMessages');
 			statusMessage.textContent = mess;
 			form.insertAdjacentElement('beforeend', statusMessage);
-
 			setTimeout(() => {
 				statusMessage.remove();
-			}, 6000);
+			}, 700);
 		}
 
 		const formData = new FormData(form);

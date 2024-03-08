@@ -1,7 +1,7 @@
 const validateForm = (spanSelector, mailInputSelector, nameSelector, btnSelector, checkboxSelector, inputsSelector) => {
 	const span = document.querySelector(spanSelector),
 		mailInput = document.querySelector(mailInputSelector),
-		name = document.querySelector(nameSelector),
+		nameInput = document.querySelector(nameSelector),
 		btn = document.querySelector(btnSelector),
 		checkbox = document.querySelector(checkboxSelector),
 		inputs = document.querySelectorAll(inputsSelector);
@@ -16,14 +16,12 @@ const validateForm = (spanSelector, mailInputSelector, nameSelector, btnSelector
 	const normalInput = (input) => {
 		input.style.cssText = `
 		border: 1px solid #000;
-		box-shadow: none;
 		`;
 	};
 
 	const errorInput = (input) => {
 		input.style.cssText = `
 		border: 1px solid #B31312;
-		box-shadow: 1px 1px 3px #B31312;
 		`;
 	};
 
@@ -32,6 +30,34 @@ const validateForm = (spanSelector, mailInputSelector, nameSelector, btnSelector
 			document.querySelectorAll('.validationMessage').forEach(item => item.remove());
 		}
 	};
+
+	//name
+
+	const nameValidation = () => {
+		const nameValue = nameInput.value.trim();
+		if (nameValue == '' || nameValue == null || nameValue.match(/\d/ig)) {
+			errorInput(nameInput);
+		} else {
+			normalInput(nameInput);
+		}
+
+		if(nameValue.match(/[^a-z]/ig)) {
+			normalInput(nameInput);
+		}
+	};
+
+	nameInput.addEventListener('input', (e) => {
+		e.preventDefault();
+		nameValidation();
+	});
+
+	nameInput.addEventListener('keypress', () => {
+		nameValidation();
+	});
+
+	nameInput.addEventListener('blur', () => {
+		nameValidation();
+	});
 
 	// email
 
@@ -77,34 +103,7 @@ const validateForm = (spanSelector, mailInputSelector, nameSelector, btnSelector
 		}
 	});
 
-	//name
-
-	const nameValidation = () => {
-		if (name.value.replace(/ /g, '') == '' || name.value == null || name.value.match(/\d/ig)) {
-			errorInput(name);
-		} else {
-			normalInput(name);
-		}
-
-		if(name.value.match(/[^a-z]/ig)) {
-			normalInput(name);
-		}
-	};
-
-	name.addEventListener('input', (e) => {
-		e.preventDefault();
-		nameValidation();
-	});
-
-	name.addEventListener('keypress', () => {
-		nameValidation();
-	});
-
-	name.addEventListener('blur', () => {
-		nameValidation();
-	});
-
-	//
+	// checkbox
 
 	const checkboxValidation = () => {
 		if(!checkbox.checked) {
@@ -134,9 +133,7 @@ const validateForm = (spanSelector, mailInputSelector, nameSelector, btnSelector
 	btn.addEventListener('click', () => {
 
 		emailValidation();
-
 		nameValidation();
-
 		checkboxValidation();
 
 		if(checkbox.checked && mailInput.value.match(/[^a-z 0-9 @]/ig)) {
@@ -153,7 +150,7 @@ const validateForm = (spanSelector, mailInputSelector, nameSelector, btnSelector
 					setTimeout(() => {
 						message.remove();
 						disabledFalse();
-					}, 3000);
+					}, 2000);
 			}
 			formMessage();
 		}
