@@ -128,7 +128,10 @@ const validateForm = (spanSelector, mailInputSelector, nameSelector, btnSelector
 
 	if(checkbox.checked && mailInput.value.match(/[^a-z 0-9 @]/ig)) {
 		disabledFalse();
-	} 
+	}
+
+
+	// button
 
 	btn.addEventListener('click', () => {
 

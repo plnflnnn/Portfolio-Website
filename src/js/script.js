@@ -6,10 +6,10 @@ import form from './modules/form.js';
 
 
 window.addEventListener('DOMContentLoaded', () => {
-	hamburger();
+	hamburger('.hamburger', '.menu', '.menu__close', '.menu__overlay');
 	carousel('.resume__certificate', '.carousel__img', '.carousel', '.carousel__btn-right', '.carousel__btn-left', '.carousel__overlay');
 	img('.resume__certificate__language', '.modal__img', '.modal', '.modal__overlay');
 	img('.resume__certificate__language-korean', '.modal__img', '.modal', '.modal__overlay');
 	validateForm('.contacts__policy span', '[name="email"]', '[name="name"]', '.contacts__btn', '[type="checkbox"]', 'input');
-	form();
+	form('form', '.contacts__btn', 'input', '[type="text"]');
 });

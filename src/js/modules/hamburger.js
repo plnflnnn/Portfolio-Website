@@ -1,8 +1,13 @@
-const hamburger = () => {
-	const hamburger = document.querySelector('.hamburger'),
-		menu = document.querySelector('.menu'),
-		closeElem = document.querySelector('.menu__close'),
-		menuOverlay = document.querySelector('.menu__overlay');
+const hamburger = (hamburgerSelector, menuSelector, closeElemSelector, menuOverlaySelector) => {
+	const hamburger = document.querySelector(hamburgerSelector),
+		menu = document.querySelector(menuSelector),
+		closeElem = document.querySelector(closeElemSelector),
+		menuOverlay = document.querySelector(menuOverlaySelector);
+
+	const hideMenu = () => {
+		menu.classList.remove('active');
+		hamburger.style.display = 'flex';
+	}
 
 	hamburger.addEventListener('click', () => {
 		menu.classList.add('active');
@@ -10,13 +15,11 @@ const hamburger = () => {
 	});
 
 	closeElem.addEventListener('click', () => {
-		menu.classList.remove('active');
-		hamburger.style.display = 'flex';
+		hideMenu();
 	});
 
 	menuOverlay.addEventListener('click', () => {
-		menu.classList.remove('active');
-		hamburger.style.display = 'flex';
+		hideMenu();
 	});
 
 };
