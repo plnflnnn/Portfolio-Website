@@ -42,6 +42,13 @@
             font-size: 26px;
         } 
     }
+    .promo {
+        &__dropdown {
+            .depth {
+                margin-right: 20%;
+            }
+        }
+    }
     .about {
         &__wrapper {
             grid-template-columns: 300px 380px;
@@ -93,25 +100,14 @@
             }
         }
     }
-    .carousel {
-        &__block {
-            width: 534px;
-            height: 397px;
-        }
-    }
-    .carousel__img {
-        margin-top: 50px;
-    }
     .portfolio {
         &__wrapper {
             margin-bottom: 100px;
+            column-gap: 10px;
+
         }
         &__item {
-            width: 250px;
-            margin-right: 15px;
-            margin-left: 15px;
-            margin-bottom: 70px;
-            margin-top: 50px;
+            width: 48%;
         }
     }
 }
@@ -129,9 +125,12 @@
         &__title {
             line-height: 39px;
         }
+        &__list {
+            display: none;
+        }
     }
     .about {
-        padding-top: 70px;
+        padding: 70px 0;
         &__wrapper {
             grid-template: 400px auto auto / 100%;
         }
@@ -140,6 +139,7 @@
         }
     }
     .resume {
+        padding: 50px 0;
         &__wrapper {
             margin-top: 0px;
             padding-top: 0;
@@ -148,8 +148,8 @@
             align-items: start;
         }
         &__column {
-            margin-top: 60px;
             width: 100%;
+            margin-bottom: 50px;
         }
         &__item {
             &-text {
@@ -158,6 +158,7 @@
         }
     }
     .contacts {
+        padding: 50px 0;
         &__form {
             grid-template: 45px 190px 45px 60px /repeat(2, 210px);
         }
@@ -165,10 +166,21 @@
             column-gap: 25px;
         }
     }
-    .carousel {
-        &__block {
-            width: 400px;
-            height: 298px;
+    .portfolio {
+        padding: 50px 0;
+        &__item {
+            p {
+                margin-top: 5px;
+                font-size: 13px;
+                line-height: 16px;
+            }
+            &_link {
+                height: 180px;
+            }
+        }
+        &__wrapper  {
+            margin-top: 20px;
+            row-gap: 30px;
         }
     }
 }
@@ -199,7 +211,7 @@
         }
     }
     .about {
-        padding-top: 50px;
+        padding: 50px 0;
         &__wrapper {
             grid-template: 340px auto auto / 100%;
         }
@@ -265,16 +277,6 @@
     .validationMessage {
         right: 0;
     }
-
-    .carousel {
-        &__block {
-            width: 320px;
-            height: 238px;
-            img {
-                margin-top: 100px;
-            }
-        }
-    }
     .modal {
         &__block {
             width: 360px;
@@ -288,7 +290,6 @@
     .statusMessages {
         grid-column: 1 / 2;
     }
-    
 }
 
 

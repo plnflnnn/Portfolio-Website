@@ -1,11 +1,11 @@
 .resume {
-    padding-top: 20px;
+    padding: 100px 0;
+    overflow: hidden;
     &__subtitle {
         text-align: center;
     }
     &__wrapper {
         margin: 0 auto;
-        padding-top: 40px;
         display: flex;
         justify-content: space-between;
         width: 920px;
@@ -52,7 +52,6 @@
             h4 {
                 margin-bottom: 0;
             }
-            
         }
         &-icon {
             position: absolute;
@@ -76,6 +75,13 @@
                 z-index: -5;
             }
         }
+        &-title {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 18px;
+            color: #000000;
+            margin: 10px 0 5px;
+        }
         &-location {
             font-weight: 500;
             font-size: 12px;
@@ -89,6 +95,21 @@
             font-size: 14px; 
             line-height: 18px;
             color: #000000;
+            span {
+                font-size: 13px;
+            }
+            a{
+                color: #000000;
+                text-decoration: none;
+            }
+            a.resume__certificate{
+                text-decoration: underline;
+                display: block;
+            }
+        }
+        &-link {
+            font-size: 16px;
+            color: #000;
         }
     }
     &__certificate {
@@ -106,8 +127,5 @@
         &:hover, &:active {
             color: #000000;
         }
-    }
-    #uni {
-        margin-top: 25px;
     }
 }

@@ -1,6 +1,6 @@
 .portfolio {
-    margin-top: 120px;
-    padding-bottom: 120px;
+    padding: 100px 0;
+    background: #f9fafb;
     &__subtitle {
         text-align: center;
         margin-top: 30px;
@@ -9,20 +9,17 @@
         display: flex;
         width: 100%;
         justify-content: center;
-        align-items: center;
         flex-wrap: wrap;
         flex-direction: row;
         margin: 0 auto;
-        margin-bottom: 120px;
+        margin-bottom: 60px;
+        row-gap: 60px;
+        column-gap: 20px;
     }
     &__item {
         transition: 0.6s all;
-        width: 220px;
-        height: 280px;
-        margin-right: 20px;
-        margin-left: 20px;
-        margin-bottom: 50px;
-        margin-top: 50px;
+        max-width: 220px;
+        width: 25%;
         img {
             object-fit: cover;
             width: 100%;
@@ -45,11 +42,16 @@
                 }
             }
         }
+        &_link {
+            height: 250px;
+            display: block;
+        }
     }
     &__descr {
         text-align: center;
         font-size: 14px;
         p {
+            margin: 0 auto 20px;
             a {
                 text-decoration: underline;
                 color: #000000;

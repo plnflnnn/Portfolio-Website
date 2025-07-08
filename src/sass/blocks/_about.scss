@@ -1,6 +1,8 @@
 .about {
-    padding-top: 100px;
+    padding: 100px 0;
     z-index: -5;
+    background: #ffffff;
+    //background: #f9fafb;
     &__wrapper {
         display: grid;
         grid-template-columns: 350px 500px;
@@ -14,7 +16,6 @@
             object-fit: cover;
             width: 100%;
             height: 100%;
-            border-radius: 5%;
         }
     }
     &__descr {
@@ -24,10 +25,10 @@
         }
     }
     &__text {
-        margin-top: 20px;
+        margin-top: 5px;
         font-weight: 300;
         font-size: 15px;
-        line-height: 21px;
+        line-height: 18px;
         color: #000000;
     }
     &__title {

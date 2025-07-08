@@ -1,83 +1,72 @@
-const carousel = ( triggersSelector, slideSelector, sliderSelector, rightArrowSelector, leftArrowSelector, overlaySelector) => {
+const carousel = (
+	triggersSelector,
+	slideSelector,
+	sliderSelector,
+	rightArrowSelector,
+	leftArrowSelector,
+	overlaySelector
+  ) => {
 	const triggers = document.querySelectorAll(triggersSelector),
-		slider = document.querySelector(sliderSelector),
-		slide = document.querySelector(slideSelector),
-		rightArrow = document.querySelector(rightArrowSelector),
-		leftArrow = document.querySelector(leftArrowSelector),
-		overlay = document.querySelector(overlaySelector),
-		body = document.querySelector('body');
+	  slider = document.querySelector(sliderSelector),
+	  slide = document.querySelector(slideSelector),
+	  rightArrow = document.querySelector(rightArrowSelector),
+	  leftArrow = document.querySelector(leftArrowSelector),
+	  overlay = document.querySelector(overlaySelector),
+	  body = document.querySelector('body');
+
+	let currentIndex = 0;
+
+	const openSliderAtIndex = (index) => {
+	  currentIndex = index;
+	  const href = triggers[currentIndex].getAttribute('data-src');
+	  slide.setAttribute('src', href);
+	  slider.style.display = 'block';
+	  body.style.overflow = 'hidden';
+	};
 
 	const closeSlider = () => {
-		slider.style.display = 'none';
-		body.style.overflow = 'auto';
+	  slider.style.display = 'none';
+	  body.style.overflow = 'auto';
 	};
 
-	overlay.addEventListener('click', () => {
-		closeSlider();
+	const showNext = () => {
+	  if (currentIndex === triggers.length - 1) {
+		currentIndex = 0;
+	  } else {
+		currentIndex++;
+	  }
+	  const href = triggers[currentIndex].getAttribute('data-src');
+	  slide.setAttribute('src', href);
+	};
+
+	const showPrev = () => {
+	  if (currentIndex === 0) {
+		currentIndex = triggers.length - 1;
+	  } else {
+		currentIndex--;
+	  }
+	  const href = triggers[currentIndex].getAttribute('data-src');
+	  slide.setAttribute('src', href);
+	};
+
+	triggers.forEach((trigger, index) => {
+	  trigger.addEventListener('click', () => {
+		openSliderAtIndex(index);
+	  });
 	});
 
-	const openSlider = () => {
-		triggers.forEach((trigger, i) => {
-			trigger.addEventListener('click', () => {
-				let href = trigger.getAttribute('data-src');
-				slider.style.display = 'block';
-				body.style.overflow = 'hidden';
-				slide.setAttribute('src', href);
+	overlay.addEventListener('click', closeSlider);
 
-				const nextSlider = () => {
-					if (i == triggers.length - 1) {
-						i = 0;
-					} else {
-						i++;
-					}
-	
-					let href = triggers[i].getAttribute('data-src');
-					slide.setAttribute('src', href);
-				};
+	rightArrow.addEventListener('click', showNext);
+	leftArrow.addEventListener('click', showPrev);
 
-				const previousSlide = () => {
-					if (i == 0) {
-						i = triggers.length - 1;
-					} else {
-						i--;
-					} 
-	
-					let href = triggers[i].getAttribute('data-src');
-					slide.setAttribute('src', href);
-				};
-		
-				rightArrow.addEventListener('click', () => { 
-					nextSlider();
-				});
+	document.addEventListener('keydown', (e) => {
+	  if (slider.style.display === 'block') {
+		if (e.key === 'ArrowRight') showNext();
+		if (e.key === 'ArrowLeft') showPrev();
+		if (e.key === 'Escape') closeSlider();
+	  }
+	});
+  };
 
-				if(slider.style.display === 'block') {
-					document.addEventListener('keydown', (e) => {
-						if(e.keyCode == '39') {
-							nextSlider();
-						}
-					});
-
-					document.addEventListener('keydown', (e) => {
-						if(e.keyCode == '37') {
-							previousSlide();
-						}
-					});
-
-					document.addEventListener('keydown', (e) => {
-						if(e.key == 'Escape' || e.key == 'Enter') {
-							closeSlider();
-						}
-					});
-				}
-
-				leftArrow.addEventListener('click', () => {
-					previousSlide();
-				});
-			});
-		});
-	};
-
-	openSlider();
-};
-
-export default carousel;
+  export default carousel;

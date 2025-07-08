@@ -1,15 +1,20 @@
 .promo {
     min-height: 100vh;
     position: relative;
-    padding-top: 205px;
-    // background: linear-gradient(250deg, #79E0EE, #98EECC, #D0F5BE, #FBFFDC);
-    background: linear-gradient(60deg, #E4F1FF, #EEF5FF,  #AED2FF, #6499E9);
-    // background: linear-gradient(60deg, #FBFFDC, #FFE5CA,#ACFADF); //green
-    background-size: 130% 140%;
-    animation: gradient-animation 7s ease infinite;
+    padding-top: 35vh;
+    //background: linear-gradient(250deg,  #98EECC, #D0F5BE, #FBFFDC); //green
+    background: linear-gradient(120deg, #E4F1FF, #EEF5FF,  #AED2FF, #6499E9);//blue
+    //background: linear-gradient(60deg, #FBFFDC, #FFE5CA,#ACFADF); //peach-green FFC5C5
+    // background: linear-gradient(60deg, #FFC5C5, #FFEBD8,  #C7DCA7);
+
+    background-size: 120% 340%;
+    animation: gradient-animation 3s linear infinite;
     &__title {
         margin-top: 10px;
         margin-right: 0;
+        font-weight: 100 !important;
+        font-style: normal;
+        font-family: "Urbanist", sans-serif;
     }
     &__subtitle {
         display: block;
@@ -26,7 +31,7 @@
         justify-content: space-between;
         width: 250px;
     }
-    &__link {
+    &__btn {
         font-size: 14px;
         font-weight: 500;
         color: #000000;
@@ -68,7 +73,79 @@
             width: 36px;
         }
     }
+    &__nav {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        z-index: 10;
+        transition: background 1s ease,height 0.5s ease, box-shadow 0.2s ease;
+        padding: 20px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 60px;
+    }
+    &__nav.scroll {
+        background: rgba(255,255,255,1);
+        border-bottom: 0.5px solid #ccc;
+    }
+    &__nav:hover {
+        transition: background 1s ease, height 0.5s ease,;
+        background: rgba(255,255,255,1);
+        box-shadow: 0px 1px 5px 0px #ccc;
+        .promo__dropdown {
+            display: flex;
+            transition: all 0.5s ease;
+        }
+        .promo__link {
+            a {
+                font-weight: 400;
+                transition: font-weight 0.5s ease;
+            }
+        }
+    }
+    &__dropdown {
+        width: 100%;
+        display: none;
+        transition: all 0.5s ease;
+        .depth {
+            width: max-content;
+            padding: 20px 10px;
+            margin: 0 auto;
+            margin-right: 30%;
+            font-size: 13px;
+            a {
+                color: #151812;
+            }
+        }
+    }
+    &__list {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 40px;
+        list-style: none;
+        margin: 0 auto;
+        font-weight: 600;
+        font-size: 13px;
+        text-transform: uppercase;
+        row-gap: 0;
+    }
+    &__link a {
+        color: $text-color;
+        text-decoration: none;
+        font-weight: 100;
+        transition: font-weight 0.5s ease;
 
+    }
+    &__link:hover {
+        box-shadow: none;
+        text-decoration: none;
+        a {
+            font-weight: 400;
+        }
+    }
 }
 
 @keyframes gradient-animation {

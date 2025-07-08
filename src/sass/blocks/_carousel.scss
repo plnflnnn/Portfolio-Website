@@ -25,29 +25,43 @@
     &__btn-right, &__btn-left {
         position: absolute;
         top: 0;
-        right: 0;
         width: 130px;
         height: 100%;
         border: none;
-        background-color: rgba(0,0,0,.02);
+        top: 50%;
+        transform: translateY(-50%);
+        background: transparent;
         cursor: pointer;
-        svg {
-            position: absolute;
-            right: 35%;
-            top: 50%;
-        }
+        width: 25px;
+        height: 25px;
         &:hover, &:active, &:focus {
             outline: none;
             outline-offset: 0;
-            svg {
-                fill:rgba(69, 66, 64, .5)
-            }
+        }
+        div {
+            display: block;
+            width: 100%;
+            height: 100%;
+            border-top: 2px solid #ffffff;
+            border-left: 2px solid #ffffff;
+            position: absolute;
+            top: 0;
+            //background: url('/img/main/arrow-wh.png') center center / contain no-repeat;
+            background: transparent;
+        }
+    }
+    &__btn-right {
+        right: -50px;
+        div {
+            transform: rotate(135deg);
+            right: 0;
         }
     }
     &__btn-left {
-        left: 0;
-        svg {
-            left: 35%;
+        left: -50px;
+        div {
+            transform: rotate(-45deg);
+            left: 0;
         }
     }
     &__overlay {
