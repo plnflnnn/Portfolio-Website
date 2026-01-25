@@ -1,4 +1,4 @@
-const img = ( triggerSelector, elementSelector, elementParentSelector, overlaySelector) => {
+const showImg = ( triggerSelector, elementSelector, elementParentSelector, overlaySelector) => {
 	const trigger = document.querySelector(triggerSelector),
         div = document.querySelector(elementSelector),
 		divParent = document.querySelector(elementParentSelector),
@@ -33,4 +33,4 @@ const img = ( triggerSelector, elementSelector, elementParentSelector, overlaySe
 	openImg();
 };
 
-export default img;
+export default showImg;

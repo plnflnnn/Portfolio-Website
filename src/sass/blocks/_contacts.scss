@@ -1,7 +1,6 @@
 .contacts {
     padding: 100px 0;
     &__wrapper {
-        padding: 0 35px 0 52px;
         display: grid;
         grid-template-columns: 350px 585px;
         column-gap: 50px;
@@ -31,6 +30,7 @@
     }
     &__link {
         margin-right: 25px;
+        text-decoration: none;
         &:hover {
             text-decoration: none;
             svg {
@@ -73,6 +73,9 @@
                 outline: none;
                 outline-offset: 0;
                 border: 1px solid #000000;
+            }
+            &.red {
+                border: 1px solid #B31312;
             }
         }
     }
@@ -173,6 +176,11 @@
     font-size: 16px;
     color: #B31312;
     grid-column: 1 / 3;
+}
+
+.validationMessage {
+    font-size: 14px;
+	color: #B31312;
 }
 
 .statusMessages {

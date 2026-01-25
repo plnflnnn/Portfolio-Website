@@ -14,11 +14,7 @@
 }
 
 @mixin gradient_bg {
-    //background: linear-gradient(250deg,  #98EECC, #D0F5BE, #FBFFDC); //green
     background: linear-gradient(120deg, #ffffff, #E4F1FF, #EEF5FF,  #AED2FF, #6499E9, #123D7D);//blue
-    //background: linear-gradient(60deg, #FBFFDC, #FFE5CA,#ACFADF); //peach-green FFC5C5
-    // background: linear-gradient(60deg, #FFC5C5, #FFEBD8,  #C7DCA7);
-
     background-size: 120% 340%;
     animation: gradient-animation 7s linear infinite;
 }

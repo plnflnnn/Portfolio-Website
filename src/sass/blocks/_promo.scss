@@ -1,7 +1,10 @@
 .promo {
-    min-height: 100vh;
     position: relative;
-    padding-top: 40vh;
+    padding-top: 35vh;
+    height: calc(95vh - 65px);
+    border-radius: 50px;
+    margin: 0 auto;
+    width: calc(97% - 50px);
     @include gradient_bg;
     &__title {
         margin-top: 1vw;
@@ -55,58 +58,8 @@
             }
         }
     }
-    .hamburger {
-        position: absolute;
-        top: 20px;
-        right: 30px;
-        height: 21px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: flex-end;
-        cursor: pointer;
-        span {
-            display: block;
-            width: 30px;
-            height: 1px;
-            background: #151812;
-        }
-        span.long {
-            width: 36px;
-        }
-    }
-    &__nav {
-        position: fixed;
-        left: 0;
-        top: 0;
-        width: 100%;
-        z-index: 10;
-        transition: background 1s ease,height 0.5s ease, box-shadow 0.2s ease;
-        padding: 20px 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 60px;
-    }
-    &__nav.scroll {
-        background: rgba(255,255,255,1);
-        border-bottom: 0.5px solid #ccc;
-    }
-    &__nav:hover {
-        transition: background 1s ease, height 0.5s ease,;
-        background: rgba(255,255,255,1);
-        box-shadow: 0px 1px 5px 0px #ccc;
-        .promo__dropdown {
-            display: flex;
-            transition: all 0.5s ease;
-        }
-        .promo__link {
-            a {
-                font-weight: 400;
-                transition: font-weight 0.5s ease;
-            }
-        }
-    }
+    
+
     &__dropdown {
         width: 100%;
         display: none;
@@ -122,30 +75,5 @@
             }
         }
     }
-    &__list {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 40px;
-        list-style: none;
-        margin: 0 auto;
-        font-weight: 600;
-        font-size: 13px;
-        text-transform: uppercase;
-        row-gap: 0;
-    }
-    &__link a {
-        color: $text-color;
-        text-decoration: none;
-        font-weight: 100;
-        transition: font-weight 0.5s ease;
 
-    }
-    &__link:hover {
-        box-shadow: none;
-        text-decoration: none;
-        a {
-            font-weight: 400;
-        }
-    }
 }

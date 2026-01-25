@@ -34,6 +34,11 @@ p {
     }
 }
 
+.visually-hidden {
+    display: none !important;
+}
+
+@import 'blocks/header';
 @import 'blocks/title';
 @import 'blocks/promo';
 @import 'blocks/buttons';

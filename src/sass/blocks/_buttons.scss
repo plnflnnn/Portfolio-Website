@@ -3,6 +3,10 @@
     padding: 12px 25px;
     transition: 0.5s all;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    text-decoration: none;
+    &:active {
+        border: none;
+    }
 }
 
 .btn_big {

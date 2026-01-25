@@ -1,12 +1,13 @@
 .sidepanel {
     position: fixed;
     z-index: 3;
-    top: 190px;
+    top: 30%;
     height: 350px;
     left: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    //display: none;
     &__link {
         svg path {
             fill: #000000;

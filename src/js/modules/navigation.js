@@ -24,13 +24,10 @@ const navigation = (
 		}
 	};
 
-	document.addEventListener('scroll', handleScroll);
-
 	const hideMenu = () => {
 		menu.classList.remove('active');
 		hamburger.style.display = 'flex';
 		showFixedNav = true;
-		handleScroll();
 	};
 
 	hamburger.addEventListener('click', () => {

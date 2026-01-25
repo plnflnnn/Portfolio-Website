@@ -2,18 +2,14 @@ const form = (formSelector, btnSelector, inputSelector, textareaSelector) => {
 	const forms = document.querySelectorAll(formSelector);
 
 	const normalInput = (input) => {
-		input.style.border = '1px solid #000';
+		input.classList.remove('red');
 	};
 	const errorInput = (input) => {
-		input.style.border = '1px solid #B31312';
+		input.classList.add('red');
 	};
 
 	const showValidationMessage = (element, message) => {
 		const validationMessage = document.createElement('div');
-		validationMessage.style.cssText = `
-			font-size: 14px;
-			color: #B31312;
-		`;
 		validationMessage.classList.add('validationMessage');
 		validationMessage.textContent = message;
 		element.insertAdjacentElement('afterend', validationMessage);

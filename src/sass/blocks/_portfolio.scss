@@ -11,8 +11,7 @@
         justify-content: center;
         flex-wrap: wrap;
         flex-direction: row;
-        margin: 0 auto;
-        margin-bottom: 60px;
+        margin: 20px auto 60px;
         row-gap: 60px;
         column-gap: 20px;
     }
@@ -51,7 +50,7 @@
         text-align: center;
         font-size: 14px;
         p {
-            margin: 0 auto 20px;
+            margin: 0 auto 10px;
             a {
                 text-decoration: underline;
                 color: #000000;
@@ -68,4 +67,35 @@
     .title {
         margin-bottom: 20px;
     }
+    &__btn {
+        border: none;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 21px;
+        color: #000;
+        background: #94add7;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, .15);
+        border-radius: 10px;
+        margin: 30px auto;
+        display: block;
+        border: none;
+        &:focus {
+            outline: none ;
+        }
+    }
+    &__btn.hidden {
+        display: none;
+    }
+
+    .more_content {
+        display: none;
+        transition: height 0.5s ease-in-out;
+        height: 0;
+        &.show {
+            display: block;
+            height: max-content;
+        }
+    }
+
+
 }

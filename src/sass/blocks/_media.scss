@@ -29,6 +29,9 @@
     .container {
         max-width: 720px;
     }
+    .hamburger {
+        right: 30px;
+    }
     .title {
         &_fz16 {
             font-size: 15px;
@@ -43,6 +46,8 @@
         } 
     }
     .promo {
+        width: 95%;
+        border-radius: 25px;
         &__dropdown {
             .depth {
                 margin-right: 20%;
@@ -121,12 +126,14 @@
             font-size: 28px;
         }
     }
+    .nav {
+        &__list {
+            display: none;
+        }
+    }
     .promo {
         &__title {
             line-height: 39px;
-        }
-        &__list {
-            display: none;
         }
         &__nav:hover {
             background: initial;
