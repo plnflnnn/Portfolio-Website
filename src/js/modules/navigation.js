@@ -17,7 +17,7 @@ const navigation = (
 		if (!showFixedNav) return;
 		const scrollY = window.scrollY;
 		const vh = window.innerHeight;
-		if (scrollY > (0)) { //vh - 50
+		if (scrollY > (1)) {
 			promoNav.classList.add('scroll');
 		} else {
 			promoNav.classList.remove('scroll');
@@ -42,21 +42,6 @@ const navigation = (
 
 	closeElem.addEventListener('click', hideMenu);
 	menuOverlay.addEventListener('click', hideMenu);
-
-
-	/*document.querySelectorAll('a[href^="#"]').forEach(link => {
-		link.addEventListener('click', function (e) {
-		  const targetId = this.getAttribute('href').slice(1);
-		  const targetEl = document.getElementById(targetId);
-  
-		  if (targetEl) {
-			e.preventDefault();
-			targetEl.scrollIntoView({ behavior: 'smooth' });
-  
-			history.replaceState(null, '', window.location.pathname);
-		  }
-		});
-	});*/
 
 	document.querySelectorAll('a[href^="#"]').forEach(link => {
 		link.addEventListener('click', function (e) {

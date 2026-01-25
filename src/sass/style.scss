@@ -34,8 +34,8 @@ p {
     }
 }
 
-@import 'blocks/promo';
 @import 'blocks/title';
+@import 'blocks/promo';
 @import 'blocks/buttons';
 @import 'blocks/sidepanel';
 @import 'blocks/menu';
@@ -43,5 +43,6 @@ p {
 @import 'blocks/resume';
 @import 'blocks/portfolio';
 @import 'blocks/contacts';
+@import 'blocks/list';
 @import 'blocks/media';
 

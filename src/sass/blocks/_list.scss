@@ -1,0 +1,28 @@
+
+.list {
+    &_page {
+        @include gradient_bg;
+        padding: 6vw 0;
+    }
+    &_title {
+        font-weight: 500;
+    }
+    &_subtitle {
+        margin-bottom: 30px;
+        font-weight: 400;
+        b {
+            font-weight: 600;
+        }
+    }
+    &_txt {
+        list-style: circle;
+        padding-left: 10px;
+        a {
+            color: #4a4e69;
+            word-break: break-all;
+            :hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}

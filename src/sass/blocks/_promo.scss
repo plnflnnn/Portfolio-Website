@@ -1,20 +1,22 @@
 .promo {
     min-height: 100vh;
     position: relative;
-    padding-top: 35vh;
-    //background: linear-gradient(250deg,  #98EECC, #D0F5BE, #FBFFDC); //green
-    background: linear-gradient(120deg, #E4F1FF, #EEF5FF,  #AED2FF, #6499E9);//blue
-    //background: linear-gradient(60deg, #FBFFDC, #FFE5CA,#ACFADF); //peach-green FFC5C5
-    // background: linear-gradient(60deg, #FFC5C5, #FFEBD8,  #C7DCA7);
-
-    background-size: 120% 340%;
-    animation: gradient-animation 3s linear infinite;
+    padding-top: 40vh;
+    @include gradient_bg;
     &__title {
-        margin-top: 10px;
+        margin-top: 1vw;
         margin-right: 0;
         font-weight: 100 !important;
         font-style: normal;
         font-family: "Urbanist", sans-serif;
+        font-size: 34px;
+        line-height: 1.2;
+        span {
+            font-weight: 100;
+            font-family: Urbanist, sans-serif;
+            font-size: 34px;
+            display: block;
+        }
     }
     &__subtitle {
         display: block;
@@ -145,17 +147,5 @@
         a {
             font-weight: 400;
         }
-    }
-}
-
-@keyframes gradient-animation {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
     }
 }
