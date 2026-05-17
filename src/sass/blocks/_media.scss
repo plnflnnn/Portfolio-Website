@@ -133,7 +133,8 @@
     }
     .promo {
         &__title {
-            line-height: 39px;
+            font-size: 32px;
+            line-height: 1.3;
         }
         &__nav:hover {
             background: initial;

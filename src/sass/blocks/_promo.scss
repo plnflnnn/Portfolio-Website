@@ -1,4 +1,7 @@
 .promo {
+    .container {
+        max-width: 90%;
+    }
     position: relative;
     padding-top: 35vh;
     height: calc(95vh - 65px);
@@ -12,12 +15,11 @@
         font-weight: 100 !important;
         font-style: normal;
         font-family: "Urbanist", sans-serif;
-        font-size: 34px;
+        font-size: 45px;
         line-height: 1.2;
         span {
             font-weight: 100;
             font-family: Urbanist, sans-serif;
-            font-size: 34px;
             display: block;
         }
     }

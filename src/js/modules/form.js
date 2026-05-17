@@ -71,11 +71,6 @@ const form = (formSelector, btnSelector, inputSelector, textareaSelector) => {
 			return true;
 		};
 
-		const clearInputs = () => {
-			inputs.forEach(item => item.value = '');
-			if (textarea) textarea.value = '';
-		};
-
 		const clearMessage = () => {
 			if(form.querySelector('.formMessage')) form.querySelector('.formMessage').remove();
 			if(form.querySelector('.statusMessages')) form.querySelector('.statusMessages').remove();
@@ -129,18 +124,21 @@ const form = (formSelector, btnSelector, inputSelector, textareaSelector) => {
 				method: 'POST',
 				body: formData
 			})
-				.then(data => data.text())
-				.then(() => {
-					showMessage(form, messages.success);
-					clearInputs();
-				})
-				.catch(() => {
-					showMessage(form, messages.failure);
-				})
-				.finally(() => {
-					form.reset();
-					btn.removeAttribute('disabled');
-				});
+			.then(res => res.json())
+			.then(data => {
+				if (data.status !== 'success') {
+					throw new Error(data.errors?.join(', ') || 'Form error');
+				}
+
+				showMessage(form, messages.success);
+			})
+			.catch(() => {
+				showMessage(form, messages.failure);
+			})
+			.finally(() => {
+				form.reset();
+				btn.removeAttribute('disabled');
+			});
 		});
 	});
 };
